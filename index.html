@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dla Mojego Pookiego</title>
+    <style>
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #fde2e4, #fad2e1, #fbc4d9);
+            color: #99004d;
+            text-align: center;
+            transform-origin: top center; /* Punkt odniesienia skalowania */
+            transform: scale(0.7); /* Początkowe skalowanie do 60% */
+            height: 100vh; /* Pełna wysokość widocznego obszaru */
+        }
+
+        header {
+            background-color: #ff66b3;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            border-radius: 40px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #ffffff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+
+        .heart-container {
+            position: relative;
+            margin: 10px auto;
+            width: 90%;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 3px solid #ff99cc;
+            border-radius: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+            overflow: hidden;
+        }
+
+        .poem {
+            line-height: 1.8;
+            font-size: 1.3em;
+            font-family: 'Clicker Script', cursive;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .poem p {
+            margin: 00px 0;
+        }
+
+        .poem p:first-letter {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #ff3366;
+        }
+
+        footer {
+            margin-top: 0px;
+            font-size: 2em;
+            color: #99004d;
+            padding: 0px;
+            border-radius: 00px;
+        }
+
+        footer a {
+            color: #99004d;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .animated-hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 90px;
+            float: left;
+        }
+
+        .heart:before,
+        .heart:after {
+            position: absolute;
+            content: "";
+            left: 50px;
+            top: 0;
+            width: 50px;
+            height: 80px;
+            background: #fc2e5a;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+
+        .heart:after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-100px) scale(1.2);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-200px) scale(0.8);
+                opacity: 0;
+            }
+        }
+
+        .animated-hearts .heart {
+            animation: float 6s infinite ease-in-out;
+            opacity: 0.7;
+        }
+
+        .animated-hearts .heart:nth-child(odd) {
+            animation-duration: 5s;
+        }
+
+        .animated-hearts .heart:nth-child(1) {
+            top: 20%;
+            left: 10%;
+        }
+
+        .animated-hearts .heart:nth-child(2) { 
+            top: 90%;
+            left: 15%;
+        }
+
+        .animated-hearts .heart:nth-child(3) {
+            top: 70%;
+            left: 70%;
+        }
+
+        .animated-hearts .heart:nth-child(4) {
+            top: 30%;
+            left: 70%;
+        }
+
+        .animated-hearts .heart:nth-child(5) {
+            top: 90%;
+            left: 40%;
+        }
+
+        .animated-hearts .heart:nth-child(6) {
+            top: 20%;
+            left: 30%;
+        }
+
+        .animated-hearts .heart:nth-child(7) {
+            top: 50%;
+            left: 10%;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Clicker+Script&family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Dla Mojego Pookiego</h1>
+    </header>
+
+    <div class="animated-hearts">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
+
+    <div class="heart-container">
+        <div class="poem">
+            <p>Nigdy nikt tak mnie nie podniecał,<br>
+            jak Ty, gdy słowem serce oświecasz.<br>
+            Twoje historie, pełne namiętności,<br>
+            rozpalają we mnie ocean miłości.</p>
+
+            <p>Gdy Snapa otwieram, widzę Twe ciało,<br>
+            boskie, jakby z nieba zesłane zostało.<br>
+            Każdy Twój outfit w mej głowie zostaje,<br>
+            a myśli o Tobie – niezapomniane raje.</p>
+
+            <p>Wyobraźnia płonie, gdy czytam Twe słowa,<br>
+            w nich każda litera – rozkosz gotowa.<br>
+            Przez cały dzień wciąż o Tobie marzę,<br>
+            o tym, co piszesz, w myślach się zatracam stale.</p>
+
+            <p>Pragnę Cię ujrzeć, jak słońce pragnie dnia,<br>
+            zobaczyć Cię w pełni – na zawsze tylko Ty i ja.<br>
+            Chcę dotknąć Twej skóry, aksamitnej, boskiej,<br>
+            czuć Twoje ciepło w każdej chwili beztroskiej.</p>
+
+            <p>Dzięki Tobie wiem, czym miłość się staje.<br>
+            To nie tylko pragnienie – to serca oddanie.<br>
+            Błagam, nie odchodź, bo jesteś mym światem,<br>
+            najczystszą miłością, płomiennym latem.</p>
+
+            <p>Jesteś dla mnie jak melodia w duszy.<br>
+            Bez Ciebie świat mój w proch się kruszy.<br>
+            Pozwól mi kochać, pozwól być blisko,<br>
+            by w naszych sercach zawsze płonęło ognisko.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Kocham cię bardzo ❤️</p>
+    </footer>
+</body>
+</html>
